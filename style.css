@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/miama");
+
+/* font-family: "Inter Tight", sans-serif; */
+/* font-family: 'Miama', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --btn-color: rgb(230, 83, 60);
+  --card-bg-color: rgb(34, 34, 34);
+  --input-bg: rgba(255, 255, 255, 0.1);
+}
+html {
+  background-color: rgb(11, 11, 11);
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
+}
+body {
+  font-family: "Inter Tight", sans-serif;
+  max-width: 90%;
+  margin: 0 auto;
+  height: 100vh;
+  background: black;
+  color: #ffffff80;
+}
+
+.banner {
+  background: linear-gradient(
+    180deg,
+    rgb(17, 17, 17),
+    rgba(119, 119, 119, 0) 100%
+  );
+}
+
+.navbar {
+  background: #1f1e1e;
+  min-height: 5vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+}
+.logo {
+  border: 2px solid red;
+  flex: 1 0 250px;
+  font-size: 2.5rem;
+  color:var(--btn-color);
+  font-weight: 700;
+}
+.menu {
+  border: 2px solid white;
+  flex: 1 0 250px;
+  font-weight: 700;
+  ;
+}
+.option-container{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    color: #ffffffa4;
+    font-size: 1.25rem;
+    
+}
+.option-container li{
+    padding: .75rem 1.5rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.option-container li:hover{
+    background-color:var(--btn-color);
+}
+
+.hamMenu{
+    border: 1px solid white;
+    flex: 0 0 50px;
+    text-align: right;
+    display: none;
+    position: relative;
+}
+
+summary{
+    list-style: none;
+}
+.dropOptions{
+    position: absolute;
+    padding: 1rem;
+    background-color: rgb(37, 38, 39);
+    list-style: none;
+    right: 30px;
+    top: 40px;
+    border-radius: 1rem;
+    min-width: max-content;
+    text-align: center;
+}
+.dropOptions li{
+    width: 100px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: .5rem 1.7rem;
+    border-radius: .5rem;
+    margin-top: 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+.dropOptions li:hover{
+    background: var(--btn-color);
+}
+.hamBars{
+    padding: 1rem;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.hamBars:hover{
+    background-color:var(--btn-color);
+}
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+@media screen and (max-width: 576px) {
+    .logo{
+        flex:0 0 150px;
+    }
+    .hamMenu{
+    display: block;
+  }
+  .menu{
+    display: none;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 993px) {
+    .logo{
+        flex:0 0 200px;
+    }
+    .menu{
+        display: block;
+      }
+}
