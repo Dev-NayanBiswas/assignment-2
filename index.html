@@ -1,173 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fitness</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./training.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./training.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
     <header>
-        <!-- Navbar -->
-        <section class="navbar">
-            <div class="logo">
-                <i>Fitness</i>
+      <!-- Navbar -->
+      <section class="navbar">
+        <div class="logo">
+          <i>Fitness</i>
+        </div>
+        <!-- Drop Down Menu -->
+        <details class="hamMenu">
+          <summary>
+            <i class="fa-solid fa-bars hamBars"></i>
+          </summary>
+          <ul class="dropOptions">
+            <li>Home</li>
+            <li>Service</li>
+            <li>Contact</li>
+            <li>About</li>
+          </ul>
+        </details>
+        <div class="menu">
+          <ul class="option-container">
+            <li>Home</li>
+            <li>Service</li>
+            <li>Contact</li>
+            <li>About</li>
+          </ul>
+        </div>
+      </section>
+      <section class="banner">
+        <div class="bannerContainer">
+          <div class="bannerText">
+            <div class="bannerTextContainer">
+              <p class="heading">
+                Get body in <br />
+                <span>shape</span> & stay <br />
+                healthy
+              </p>
+              <p>
+                A huge selection of health and fitness content, healthy recipes
+                <br />
+                and transformation stories to help you get fit and stay fit!
+              </p>
+              <div class="btnContainer">
+                <button class="joinButton btn">Join Club Now!</button>
+                <button class="transButton btn">Download App</button>
+              </div>
             </div>
-            <!-- Drop Down Menu -->
-            <details class="hamMenu">
-                <summary>
-                    <i class="fa-solid fa-bars hamBars"></i>
-                </summary>
-                <ul class="dropOptions">
-                    <li>Home</li>
-                    <li>Service</li>
-                    <li>Contact</li>
-                    <li>About</li>
-                </ul>
-            </details>
-            <div class="menu">
-                <ul class="option-container">
-                    <li>Home</li>
-                    <li>Service</li>
-                    <li>Contact</li>
-                    <li>About</li>
-                </ul>
-            </div>
-        </section>
-        <section class="banner">
-            <div class="bannerContainer">
-                <div class="bannerText">
-                    <div class="bannerTextContainer">
-                        <p class="heading">
-                            Get body in <br> <span>shape</span> & stay <br> healthy
-                        </p>
-                        <p>A huge selection of health and fitness content, healthy recipes <br> and transformation stories to help you get fit and stay fit!</p>
-                        <div class="btnContainer">
-                            <button class="joinButton btn">Join Club Now!</button>
-                            <button class="transButton btn">Download App</button>
-                        </div>
-                    </div>
-                    
-                </div>
+          </div>
 
-                <div class="bannerFigure">
-                        <div class="box1">
-                            <p class="boldText">500+</p>
-                            <p class="smallText">Free Workout Videos</p>
-                        </div>
-                        <div class="box2">
-                            <p><i class="fa-solid fa-circle roundIcon"></i></p>
-                            <div>
-                                <p class="boldText">350+</p>
-                            <p class="smallText">Video tutorials</p>
-                            </div>
-                        </div>
-                        <div class="image">
-                            <img src="./assets/images/Images 2.png" alt="workOut Dude">
-                        </div>
-                </div>
+          <div class="bannerFigure">
+            <div class="box1">
+              <p class="boldText">500+</p>
+              <p class="smallText">Free Workout Videos</p>
             </div>
-        </section>
+            <div class="box2">
+              <p><i class="fa-solid fa-circle roundIcon"></i></p>
+              <div>
+                <p class="boldText">350+</p>
+                <p class="smallText">Video tutorials</p>
+              </div>
+            </div>
+            <div class="image">
+              <img src="./assets/images/Images 2.png" alt="workOut Dude" />
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
     <main>
-        <!-- Habit Section -->
-         <section class="habit">
-            <div class="habitTxt">
-                <h1>Change Your Habits</h1>
-                <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym.</p>
+      <!-- Habit Section -->
+      <section class="habit">
+        <div class="habitTxt">
+          <h1>Change Your Habits</h1>
+          <p>
+            We believe fitness should be accessible to everyone, everywhere,
+            regardless of income or access to a gym.
+          </p>
+        </div>
+        <div class="habitCards">
+          <div class="card" style="text-align: center">
+            <div class="cardImage">
+              <img src="./assets/images/image 2.png" alt="cardImage" />
             </div>
-            <div class="habitCards">
-                <div class="card" style="text-align: center;">
-                    <div class="cardImage">
-                        <img src="./assets/images/image 2.png" alt="cardImage">
-                    </div>
-                    <div class="cardText" style="text-align: center;">
-                        <h2>Movement</h2>
-                        <p>We believe fitness should be <br> accessible to everyone.</p>
-                    </div>
-                </div>
-                <div class="card" style="text-align: center;">
-                    <div class="cardImage">
-                        <img src="./assets/images/image 3.png" alt="cardImage">
-                    </div>
-                    <div class="cardText" style="text-align: center;">
-                        <h2>Time</h2>
-                        <p>We believe fitness should be <br> accessible to everyone.</p>
-                    </div>
-                </div>
-                <div class="card" style="text-align: center;">
-                    <div class="cardImage">
-                        <img src="./assets/images/image 4.png" alt="cardImage">
-                    </div>
-                    <div class="cardText" style="text-align: center;">
-                        <h2>Practice</h2>
-                        <p>We believe fitness should be <br> accessible to everyone.</p>
-                    </div>
-                </div>
-                <div class="card" style="text-align: center;">
-                    <div class="cardImage">
-                        <img src="./assets/images/image 5.png" alt="cardImage">
-                    </div>
-                    <div class="cardText" style="text-align: center;">
-                        <h2>Weight Loss</h2>
-                        <p>We believe fitness should be <br> accessible to everyone.</p>
-                    </div>
-                </div>
+            <div class="cardText" style="text-align: center">
+              <h2>Movement</h2>
+              <p>
+                We believe fitness should be <br />
+                accessible to everyone.
+              </p>
             </div>
-         </section>
-         <!-- Run Extra Miles -->
-          <section>
-            <div class="runMiles">
-                <div class="runContent">
-                    <h1>Run an Extra <br>
-                        Mile Easily</h1>
-                    <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. With hundreds of professional workouts.</p>
-                    <button class="runBtn btn">Join Now</button>
-                </div>
-            <div class="runImage">
-                <!-- <img src="./assets/images/run.jpg" alt="Running"> -->
+          </div>
+          <div class="card" style="text-align: center">
+            <div class="cardImage">
+              <img src="./assets/images/image 3.png" alt="cardImage" />
             </div>
+            <div class="cardText" style="text-align: center">
+              <h2>Time</h2>
+              <p>
+                We believe fitness should be <br />
+                accessible to everyone.
+              </p>
             </div>
-          </section>
-          <!-- Training and Exercises -->
-           <!-- <section class="training">
+          </div>
+          <div class="card" style="text-align: center">
+            <div class="cardImage">
+              <img src="./assets/images/image 4.png" alt="cardImage" />
+            </div>
+            <div class="cardText" style="text-align: center">
+              <h2>Practice</h2>
+              <p>
+                We believe fitness should be <br />
+                accessible to everyone.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="text-align: center">
+            <div class="cardImage">
+              <img src="./assets/images/image 5.png" alt="cardImage" />
+            </div>
+            <div class="cardText" style="text-align: center">
+              <h2>Weight Loss</h2>
+              <p>
+                We believe fitness should be <br />
+                accessible to everyone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Run Extra Miles -->
+      <section>
+        <div class="runMiles">
+          <div class="runContent">
+            <h1>
+              Run an Extra <br />
+              Mile Easily
+            </h1>
+            <p>
+              We believe fitness should be accessible to everyone, everywhere,
+              regardless of income or access to a gym. With hundreds of
+              professional workouts.
+            </p>
+            <button class="runBtn btn">Join Now</button>
+          </div>
+          <div class="runImage">
+            <!-- <img src="./assets/images/run.jpg" alt="Running"> -->
+          </div>
+        </div>
+      </section>
+      <!-- Training and Exercises -->
+      <!-- <section class="training">
             <div class="trainingContent">
                 <h1>Training and Exercises</h1>
                 <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym.</p>
             </div>
            </section> -->
 
-           <!-- BMI Section -->
-            <section class="BMI">
-                <div class="BMIchart">
-                    <h1>BMI Calculator Chart</h1>
-                    <table class="tableChart">
-                        <tr>
-                            <th>BMI</th>
-                            <th>Weight Status</th>
-                        </tr>
-                        <tr>
-                            <td>Below 18.5</td>
-                            <td>Underweight</td>
-                        </tr>
-                        <tr>
-                            <td>18.5 - 24.9</td>
-                            <td>Healthy</td>
-                        </tr>
-                        <tr>
-                            <td>25.0 - 29.9</td>
-                            <td>Overweight</td>
-                        </tr>
-                        <tr>
-                            <td>30.0 - and above</td>
-                            <td>Obese</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="BMIcalculate"></div>
-            </section>
+      <!-- BMI Section -->
+      <section class="BMI">
+        <div class="BMIchart">
+          <h1>BMI Calculator Chart</h1>
+          <table class="tableChart">
+            <tr>
+              <th>BMI</th>
+              <th>Weight Status</th>
+            </tr>
+            <tr>
+              <td>Below 18.5</td>
+              <td>Underweight</td>
+            </tr>
+            <tr>
+              <td>18.5 - 24.9</td>
+              <td>Healthy</td>
+            </tr>
+            <tr>
+              <td>25.0 - 29.9</td>
+              <td>Overweight</td>
+            </tr>
+            <tr>
+              <td>30.0 - and above</td>
+              <td>Obese</td>
+            </tr>
+          </table>
+        </div>
+        <div class="BMIcalculate">
+          
+
+          <div class="inputContainer">
+            <div class="bmi-txt">
+                <h1>Calculate your BMI</h1>
+              <p>
+                We believe fitness should be accessible to everyone,everywhere <br>
+                regardless of income or access to a gym
+              </p>
+              </div>
+            <div>
+              <input type="text" name="" id="" placeholder="Height/cm" />
+              <input type="text" name="" id="" placeholder="Weight/kg" />
+            </div>
+
+            <div>
+                <input class="age" type="text" name="" id="" placeholder="Age" />
+
+            <select id="gender" placeholder="Select" name="hello">
+              <option value="Hello">Sex</option>
+              <option value="Hello">Male</option>
+              <option value="Hello">Female</option>
+              <option value="Hello">Others</option>
+            </select>
+            </div>
+
+            <select name="" id="activity">
+              <option value="">Select an activity factor</option>
+              <option value="">Runner</option>
+              <option value="">Boxer</option>
+              <option value="">Other</option>
+            </select> <br>
+            <button class="BMIbtn btn">Calculate</button>
+          </div>
+
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>

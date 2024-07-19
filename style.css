@@ -356,35 +356,30 @@ span {
 /* BMI Chart */
 .BMI{
   margin:0;
-  padding: 3rem;
   border: 2px solid steelblue;
   background: var(--input-bg);
   display: flex;
   min-height: 30vh;
+  justify-content: space-between;
+  flex-flow: row wrap;
 }
 
 /* BMIchart */
 .BMIchart{
   border: 2px dashed orange;
   padding: 2rem;
-  flex: 1;
-  text-align: center;
-  align-self: center;
+  flex: 1 0 auto;
 }
 .BMIchart h1{
   margin: 2rem auto;
   color:var(--txt-color)
 }
 .tableChart{
-  margin: auto;
-  text-align: center;
-  align-self: center;
-  width: 300px;
+  width: 400px;
 
 }
 
 th{
-  /* border:1px solid rgba(255, 255, 255, 0.1); */
   margin: 0;
   padding: 1rem;
   text-align: left;
@@ -394,7 +389,6 @@ th{
 .tableChart td{
   text-align: left;
   padding: 1rem;
-  /* border: 2px solid rgba(255, 255, 255, 0.1); */
   border-bottom:1px solid blue; 
   border-right:1px solid blue;
   border-collapse: separate; 
@@ -409,8 +403,85 @@ table{
 
 /* Calculator */
 .BMIcalculate{
+  margin: auto;
+  height: 100%;
   border: var(--input-bg);
-  flex: 1;
+  flex: 1 0 auto;
+  align-self: flex-end;
+}
+
+.inputContainer{
+  padding: 2rem;
+  margin: auto;
+  height: 100%;
+}
+.BMIcalculate h1{
+  font-weight: 700;
+  color: var(--txt-color);
+  margin: 2rem auto;
+}
+.BMIcalculate p{
+  font-weight: 400;
+  color: var(--para-txt-color);
+  margin-bottom: 2rem;
+}
+.bmi-txt{
+}
+input{
+  height: 3rem;
+  min-width: calc((100% - 3rem) / 2);
+  padding: 1rem;
+  border-radius:5px;
+  border: none;
+  background-color: #454444;
+  transition: all 0.5s linear;
+  font-weight: 700;
+  color: var(--para-txt-color);
+  text-align: left;
+}
+input:nth-child(2){
+  margin-left: 0.7rem;
+}
+
+
+input:focus{
+  outline: none;
+  color:var(--para-txt-color);
+  background: #9c9a9a;
+}
+input:active{
+  outline: none;
+  color: inherit;
+}
+
+
+select{
+  height: 3rem;
+  min-width: calc(50% - 1.35rem);
+  border-radius:5px;
+  border: none;
+  background-color: #454444;
+  font-weight: 700;
+  color: var(--para-txt-color);
+  transition: all 0.5s linear;
+}
+
+select:focus{
+  outline: none;
+  color:var(--para-txt-color);
+  background: #9c9a9a;
+}
+#gender{
+  margin-left: 0.7rem;
+}
+#activity{
+  min-width: calc(100% - 2rem);
+  padding: 1rem;
+  margin-top: 0.7rem;
+}
+
+.BMIbtn{
+  margin-top: 1rem;
 }
 
 /* Media Queries */
@@ -434,6 +505,11 @@ table{
   }
   .runContent {
     flex: 1 0 300px;
+  }
+  .inputContainer{
+    padding: 2rem;
+    margin: auto;
+    height: 100%;
   }
 }
 @media screen and (min-width: 577px) and (max-width: 993px) {
