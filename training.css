@@ -1,0 +1,63 @@
+.trainingCards-Container{
+    border: 4px solid red ;
+    margin: auto;
+    max-width: 80vw;
+    background: rgb(172, 163, 163);
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    /* grid-template-rows:repeat(6,1fr); */
+}
+.exCard{
+    position: relative;
+    border: 2px solid blue;
+    height: 200px;
+    /* min-width:00px; */
+}
+.bg-Image img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+}
+.exCard:nth-child(1){
+    background-color: aquamarine;
+    grid-column: 1 / span 3;
+    grid-row: 1/4;
+    /* background: url(./assets/images/exercise1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+.exCard:nth-child(2){
+    background-color: rgb(255, 127, 127);
+    grid-column: 4 / span 6;
+    grid-row: 1/4;
+}
+.exCard:nth-child(3){
+    background-color: rgb(110, 130, 123);
+    grid-column:10 / span 3;
+    grid-row: 1/4;
+
+}
+.exCard:nth-child(4){
+    background-color: rgba(193, 90, 179, 0.783);
+    grid-column: 1/span 4;
+    grid-row: 4/7;
+
+}
+.exCard:nth-child(5){
+    background-color: rgba(153, 127, 255, 0.643);
+    grid-column: 5/9;
+    grid-row: 4/7;
+
+}
+.exCard:nth-child(6){
+    background-color: rgb(44, 54, 51);
+    grid-column: 9/13;
+    grid-row:4/7;
+}
