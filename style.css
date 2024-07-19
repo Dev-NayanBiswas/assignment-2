@@ -354,6 +354,16 @@ span {
 }
 
 /* BMI Chart */
+.BMIheading{
+  text-align: center;
+  margin: 5rem 0;
+}
+.BMIheading>h1{
+  font-size: var(--header-txt);
+  color: var(--txt-color);
+  font-weight:700;
+
+}
 .BMI{
   margin:0;
   border: 2px solid steelblue;
@@ -407,7 +417,7 @@ table{
   height: 100%;
   border: var(--input-bg);
   flex: 1 0 auto;
-  align-self: flex-end;
+  /* align-self: flex-end; */
 }
 
 .inputContainer{
@@ -438,6 +448,7 @@ input{
   font-weight: 700;
   color: var(--para-txt-color);
   text-align: left;
+  margin-top: 0.7rem;
 }
 input:nth-child(2){
   margin-left: 0.7rem;
@@ -484,6 +495,102 @@ select:focus{
   margin-top: 1rem;
 }
 
+/* our team */
+.meetHeading {
+  text-align: center;
+  margin: 5rem;
+}
+.meetHeading h1{
+  font-size: var(--header-txt);
+  font-weight: 700;
+  color: var(--txt-color);
+}
+.teamCards{
+  background: var(--input-bg);
+  max-width: 100%;
+  margin: auto;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.teamCard{
+  border: 2px solid green;
+  border-radius: 1rem;
+  background: url(./assets/images/trainer1.png);
+  background-position: top 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* max-width:300px ; */
+  height: 55vh;
+  isolation: isolate;
+}
+.teamCard:nth-child(2){
+  background: url(./assets/images/trainer2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.teamCard:nth-child(3){
+  background: url(./assets/images/trainer3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.teamCard:nth-child(4){
+  background: url(./assets/images/trainer4.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.teamCard:nth-child(5){
+  background: url(./assets/images/trainer5.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.teamCard:nth-child(6){
+  background: url(./assets/images/trainer6.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardTxt{
+  color: var(--para-txt-color);
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.cardTxt h4{
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--txt-color);
+}
+.cardTxt::after{
+  content: "";
+  position: absolute;
+  background-color: rgb(10, 10, 10);
+  /* mix-blend-mode: darken; */
+  inset:0;
+  opacity: 0.3;
+}
+.txtBox{
+  position: relative;
+  top: 80%;
+  left: 10%;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
 /* Media Queries */
 @media screen and (max-width: 576px) {
   .logo {
@@ -510,6 +617,9 @@ select:focus{
     padding: 2rem;
     margin: auto;
     height: 100%;
+  }
+  .teamCards{
+    grid-template-columns: repeat(1,1fr);
   }
 }
 @media screen and (min-width: 577px) and (max-width: 993px) {
@@ -543,5 +653,8 @@ select:focus{
   .runContent {
     flex: 1 0 250px;
     justify-content: center;
+  }
+  .teamCards{
+    grid-template-columns: repeat(2,1fr);
   }
 }
