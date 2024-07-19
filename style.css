@@ -583,11 +583,71 @@ select:focus{
   color: white;
 }
 
+.footerContainer{
+  /* padding: 1rem; */
+  text-transform: capitalize;
+  margin: 5rem auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerContainer h1{
+  color: var(--txt-color);
+  margin: 2rem 0;
+}
+
+.logoAndDes>p{
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient:horizontal;
+  overflow: hidden;
+}
+
+.footerContainer ul li{
+  margin: 1rem 0;
+  list-style: none;
+  text-transform: capitalize;
 
 
+}
+.footerContainer ul li>a{
+  text-decoration: none;
+  color: var(--para-txt-color);
+}
+.footerContainer ul li>a:visited{
+  text-decoration: none;
+}
 
+.logoAndDes{
+  flex: 2 0 400px;
+}
+.getStarted{
+  flex: 1 0 300px;
+  text-align: left;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: end;
+}
+.ourServices{
+  flex: 1 0 300px;
+  text-align: left;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: end;
+}
+.horiLine{
+  height: 0.1rem;
+  width: 100%;
+  margin: 2rem auto;
+  background-color: var(--input-bg);
+}
 
-
+.copy{
+  text-align: center; 
+  color: var(--txt-color); 
+  padding: 2rem;
+}
 
 
 
@@ -621,7 +681,17 @@ select:focus{
   .teamCards{
     grid-template-columns: repeat(1,1fr);
   }
+  .getStarted{
+    align-items: start;
+  }
+  .ourServices{
+    align-items: start;
+  }
 }
+
+
+
+
 @media screen and (min-width: 577px) and (max-width: 993px) {
   .logo {
     flex: 0 0 200px;
