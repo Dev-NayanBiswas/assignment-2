@@ -1,63 +1,149 @@
-.trainingCards-Container{
-    border: 4px solid red ;
-    margin: auto;
-    max-width: 80vw;
-    background: rgb(172, 163, 163);
-    display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
-    /* grid-template-rows:repeat(6,1fr); */
-}
-.exCard{
+
+  .all-images {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  .image-container {
+    /* width: 400px;
+    height: 350px; */
     position: relative;
-    border: 2px solid blue;
-    height: 200px;
-    /* min-width:00px; */
-}
-.bg-Image img{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width:100%;
-    height:100%;
+    overflow: hidden;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .image-container>
+  .headings{
+      position: absolute;
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: inherit;
+      display: inline;
+      z-index: 100;
+  }
+  #heading1 {
+      left: 5%;
+      bottom: 5%;
+  }
+  #heading2{
+      left: 15%;
+      top: 20%;
+  }
+  #heading3{
+      left: 5%;
+      top: 80%;
+  }
+  #heading4{
+      right: 15%;
+      top: 20%;
+  
+  }
+  #heading5{
+      left: 15%;
+      top: 70%;
+  
+  }
+  #heading6{
+      right: 15%;
+      top: 60%;
+  
+  }
+  
+  
+  
+  .image-container .image {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s linear;
+    z-index: 2;
     object-fit: cover;
-    object-position: center;
-}
-.exCard:nth-child(1){
-    background-color: aquamarine;
-    grid-column: 1 / span 3;
-    grid-row: 1/4;
-    /* background: url(./assets/images/exercise1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-}
-.exCard:nth-child(2){
-    background-color: rgb(255, 127, 127);
-    grid-column: 4 / span 6;
-    grid-row: 1/4;
-}
-.exCard:nth-child(3){
-    background-color: rgb(110, 130, 123);
-    grid-column:10 / span 3;
-    grid-row: 1/4;
+    transition: all 0.1s linear;
+  }
+  
+  .image:hover{
+      transform: scale(1.1);
+  }
+  
+  .image-container::after {
+    content: "";
+    position: absolute;
+    background: rgba(135, 235, 227, 0.5);
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: hard-light;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    transition: all 0.3s linear;
+  }
+  .image-container:hover::after {
+    width:0%;
+  }
+  
+  /* Default Setting */
+  .image-container:nth-child(1){
+      flex: 1 0 calc((100% / 5) * 1.5);
+  }
+  .image-container:nth-child(2){
+      flex: 1 0 calc((100% / 5) * 2) ;
+  }
+  .image-container:nth-child(3){
+      flex: 1 0 calc((100% / 5) * 1.5);
+  }
+  .image-container:nth-child(4){
+      color: rgb(250, 249, 248);
+      flex: 1 0 calc((100% / 5) * 1.8);
+  }
+  .image-container:nth-child(5){
+      flex: 1 0 calc((100% / 5) * 1.4);
+  }
+  .image-container:nth-child(6){
+      flex: 1 0 calc((100% / 5) * 1.8);
+  }
+  
+  
+  /* test for smaller devices*/
+  
+  
+  
+  
+  
+  .image-container:nth-child(2)::after{
+      background-color: rgba(214, 95, 95, 0.409);
+  }
+  .image-container:nth-child(3)::after{
+      background: rgba(41, 19, 19, 0.607);
+  }
+  .image-container:nth-child(4)::after{
+      background-color: rgba(61, 58, 58, 0.944);
+  }
+  .image-container:nth-child(5)::after{
+      background-color: rgba(5, 247, 1, 0.423);
+  }
+  .image-container:nth-child(6)::after{
+      background-color: rgba(64, 61, 236, 0.549);
+  }
 
-}
-.exCard:nth-child(4){
-    background-color: rgba(193, 90, 179, 0.783);
-    grid-column: 1/span 4;
-    grid-row: 4/7;
-
-}
-.exCard:nth-child(5){
-    background-color: rgba(153, 127, 255, 0.643);
-    grid-column: 5/9;
-    grid-row: 4/7;
-
-}
-.exCard:nth-child(6){
-    background-color: rgb(44, 54, 51);
-    grid-column: 9/13;
-    grid-row:4/7;
-}
+  @media screen and (max-width: 576px) {
+    .image-container:nth-child(1){
+        flex: 3 0 200px;
+    }
+    .image-container:nth-child(2){
+        flex: 4  0 200px ;
+    }
+    .image-container:nth-child(3){
+        flex: 3 0 200px;
+    }
+    .image-container:nth-child(4){
+        color: rgb(250, 249, 248);
+        flex: 4 0 200px;
+    }
+    .image-container:nth-child(5){
+        flex: 2 0 200px;
+    }
+    .image-container:nth-child(6){
+        flex: 4 0 200px;
+    }
+  }
