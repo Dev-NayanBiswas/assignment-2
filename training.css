@@ -126,6 +126,17 @@
       background-color: rgba(64, 61, 236, 0.549);
   }
 
+
+  /* FAQ section */
+
+
+
+
+
+
+
+
+
   @media screen and (max-width: 576px) {
     .image-container:nth-child(1){
         flex: 3 0 200px;

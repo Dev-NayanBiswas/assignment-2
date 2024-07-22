@@ -44,7 +44,7 @@ body {
 
 header {
   background: linear-gradient(180deg, rgb(35, 34, 34), rgb(0, 0, 0) 100%);
-  min-height: 100vh;
+  min-height: 90vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -187,7 +187,7 @@ summary {
   object-fit: cover;
 }
 
-.image {
+.bannerImage {
   align-self: baseline;
   width: 100%;
 }
@@ -279,8 +279,7 @@ span {
 
 /* Change Habits  */
 .habit {
-  margin-top: 6rem;
-  /* border: 2px solid green; */
+  /* margin-top: 2rem; */
   min-height: 20vh;
 }
 .habitTxt {
@@ -297,7 +296,7 @@ span {
   /* border: 2px solid wheat; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .cardText h2 {
@@ -312,22 +311,23 @@ span {
 
 /* Run Extra Miles */
 .runMiles {
-  margin: 4rem 0;
+  margin: 5rem 0;
   min-height: max-content;
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 1.4rem;
   /* border: 2px solid green; */
   background-color: var(--input-bg);
   display: flex;
   flex-flow: row wrap;
-  gap: 2rem;
+  gap: 3rem;
 }
 .runContent {
   color: var(--txt-color);
   /* border: 2px solid steelblue; */
-  flex: 1 0 600px;
+  flex: 1 0 350px;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-between;
 }
 .runContent h1 {
   font-size: var(--header-txt);
@@ -341,22 +341,30 @@ span {
   align-self: start;
 }
 
-.runImage {
-  min-height: 200px;
+.runImageContainer {
   /* border: 2px solid red; */
-  flex: 1 0 250px;
-  background-image: url(./assets/images/run.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* padding: 1rem; */
+  max-height: 450px;
+  min-width: 300px;
+  flex: 1 0 350px;
+
+}
+.runImage{
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}
+.runImage >img{
+  width: 100%;
+  height: 100%;
   border-radius: 1rem;
+  object-fit:cover;
+  object-position:center;
 }
 
 /* BMI Chart */
 .BMIheading{
   text-align: center;
-  margin: 5rem 0;
+  margin: 5rem 0 2rem;
 }
 .BMIheading>h1{
   font-size: var(--header-txt);
@@ -495,93 +503,190 @@ select:focus{
   margin-top: 1rem;
 }
 
-/* our team */
-.meetHeading {
+
+
+/* FAQ section */
+.FAQ{
+  margin: 5rem auto;
+  width: 100%;
+  height: calc(100% - 50vh);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.FAQ .FAQtitleBox{
+  position: relative;
+  display: block;
+  font-size: var(--header-txt);
+  color: var(--txt-color);
   text-align: center;
-  margin: 5rem;
+  margin-bottom: 2rem;
+}
+.FAQ-container{
+  position: relative;
+  display: block;
+
+}
+
+.FAQ-card{
+  display: block;
+
+}
+
+.FAQbar{
+  display: block;
+  top: 100px;
+  text-decoration: none;
+  color: var(--para-txt-color);
+  font-weight: 900;
+  font-size:1.8rem;
+  background-color: #454444;
+  padding: 1rem;
+  transition: all 0.3s linear;
+}
+.FAQ-card .FAQbar:hover{
+  background-color: #45444491;
+}
+.FAQ-answer{
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s linear,padding 0.2s ease;
+}
+.FAQ-answer>p{
+  background: var(--input-bg);
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+.FAQ-answer>p::first-letter{
+  font-size: 2rem;
+  color: red;
+  font-family: cursive;
+  font-style: italic;
+}
+.FAQ-answer:target{
+  height: 50vh;
+  padding: 10rem;
+}
+
+
+
+/* text-decoration: none;
+  z-index: 10;
+  box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.2) inset, 0px -1px 0 rgba(0, 0, 0, 0.2) inset, 0px 1px 9px rgba(49, 47, 47, 0),0px 5px 9px rgb(4, 4, 4); */
+
+
+
+
+
+
+
+
+
+
+/* our team */
+.meetOurTeam{
+  padding-top: 2rem;
+}
+.meetHeading {
+  margin: 6rem auto 1rem auto;
+  text-align: center;
 }
 .meetHeading h1{
   font-size: var(--header-txt);
-  font-weight: 700;
   color: var(--txt-color);
-}
-.teamCards{
-  background: var(--input-bg);
-  max-width: 100%;
-  margin: auto;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-.teamCard{
-  /* border: 2px solid green; */
-  border-radius: 1rem;
-  background: url(./assets/images/trainer1.png);
-  background-position: top 30%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* max-width:300px ; */
-  height: 55vh;
-  isolation: isolate;
-}
-.teamCard:nth-child(2){
-  background: url(./assets/images/trainer2.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.teamCard:nth-child(3){
-  background: url(./assets/images/trainer3.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.teamCard:nth-child(4){
-  background: url(./assets/images/trainer4.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.teamCard:nth-child(5){
-  background: url(./assets/images/trainer5.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.teamCard:nth-child(6){
-  background: url(./assets/images/trainer6.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* margin: 2rem auto; */
 }
 
-.cardTxt{
-  color: var(--para-txt-color);
-  height: 100%;
+.teamCardsContainer{
   width: 100%;
-  position: relative;
+  background: var(--input-bg);
+  padding: 3rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 3rem;
 }
-.cardTxt h4{
-  font-weight: 900;
-  font-size: 2rem;
+
+
+.CardContent{
+  margin: 0 auto;
+  position: relative;
+  max-width: 650px;
+  min-height: 500px;
+  border-radius: 10px;
+}
+.teamTextBox{
+  position: absolute;
+  color: var(--para-txt-color);
+  top: 85%;
+  left: 10%;
+}
+.teamTextBox h4{
+  --team-heading:1.5rem;
+  font-size: var(--para-heading-size);
+  font-weight: 700;
+  font-size: var(--team-heading);
   color: var(--txt-color);
 }
-.cardTxt::after{
+.trainnerImage{
+  position: relative;
+  border-radius: 40px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.trainnerImage> img{
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.trainnerImage::after{
   content: "";
   position: absolute;
-  background-color: rgb(10, 10, 10);
-  /* mix-blend-mode: darken; */
-  inset:0;
-  opacity: 0.3;
+  background: linear-gradient(to top right, rgba(3, 3, 3, 0.835), rgba(59, 55, 55, 0));
+  mix-blend-mode: multiply;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius:0.82rem;
 }
-.txtBox{
-  position: relative;
-  top: 80%;
-  left: 10%;
-  color: white;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
 
 .footerContainer{
   padding: 2.5rem;
@@ -597,12 +702,6 @@ select:focus{
   margin: 2rem 0;
 }
 
-.logoAndDes>p{
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient:horizontal;
-  overflow: hidden;
-}
 
 .footerContainer ul li{
   margin: 1rem 0;
@@ -679,6 +778,9 @@ select:focus{
     right: 15%;
     top: 25%;
   }
+  .runBtn{
+    width: 100%;
+  }
   .runContent {
     flex: 1 0 300px;
   }
@@ -696,6 +798,16 @@ select:focus{
   .ourServices{
     align-items: start;
   }
+  .teamCardsContainer{
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    gap: 2rem;
+  }
+  .CardContent{
+    width: 455px;
+    height: 300px;
+  }
+  
 }
 
 
@@ -733,7 +845,13 @@ select:focus{
     flex: 1 0 250px;
     justify-content: center;
   }
-  .teamCards{
-    grid-template-columns: repeat(2,1fr);
+  .teamCardsContainer{
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    gap: 2rem;
+  }
+  .CardContent{
+    width: 400px;
+    height: 300px;
   }
 }
