@@ -21,6 +21,7 @@ html {
   --para-txt-color: #ffffff80;
   --header-txt: 3rem;
   --para-heading-size: 1.2rem;
+  --transition-effect: all 0.4s linear;
 }
 .btn {
   padding: 1rem 2.5rem;
@@ -94,7 +95,7 @@ header {
   padding: 0.75rem 1.5rem;
   border-radius: 1.5rem;
   cursor: pointer;
-  transition: all 0.3s linear;
+  transition: var(--transition-effect);
 }
 .option-container li:hover {
   background-color: var(--btn-color);
@@ -130,7 +131,7 @@ summary {
   border-radius: 0.5rem;
   margin-top: 0.7rem;
   cursor: pointer;
-  transition: all 0.3s ease-in;
+  transition: var(--transition-effect);
 }
 .dropOptions li:hover {
   background: var(--btn-color);
@@ -141,7 +142,7 @@ summary {
   font-size: 1.5rem;
   font-weight: 900;
   cursor: pointer;
-  transition: all 0.3s linear;
+  transition: var(--transition-effect);
 }
 .hamBars:hover {
   background-color: var(--btn-color);
@@ -202,7 +203,7 @@ summary {
   top: 23%;
   right: 25%;
   max-width: 50vw;
-  transition: all 0.5s linear;
+  transition: var(--transition-effect);
 }
 .box1:hover {
   scale: 1.1;
@@ -247,7 +248,7 @@ summary {
   top: 75%;
   left: 18%;
   max-width: 50vw;
-  transition: all 0.5s linear;
+  transition: var(--transition-effect);
 }
 .box2:hover {
   scale: 1.1;
@@ -271,7 +272,7 @@ span {
   background-color: transparent;
   border: 0.2rem solid var(--input-bg);
   margin-left: 1rem;
-  transition: all 0.3s linear;
+  transition:var(--transition-effect);
 }
 .transButton:hover {
   background-color: #1f1e1e;
@@ -402,20 +403,18 @@ th{
   padding: 1rem;
   text-align: left;
   color: var(--txt-color);
+  border:0.1px solid rgba(255, 255, 255, 0.1); 
 
 }
-.tableChart td{
+td{
   text-align: left;
-  padding: 1rem;
-  border-bottom:1px solid blue; 
-  border-right:1px solid blue;
-  border-collapse: separate; 
+  padding: 1rem; 
+  border:0.1px solid rgba(255, 255, 255, 0.1); 
 }
-tr{
-  color:var(--para-txt-color);
-}
+
 table{
   border: 0.1px solid rgba(255, 255, 255, 0.1);
+  border-collapse: collapse;
 }
 
 
@@ -447,12 +446,12 @@ table{
 }
 input{
   height: 3rem;
-  min-width: calc((100% - 3rem) / 2);
+  min-width: calc((100% - 1rem) / 2);
   padding: 1rem;
   border-radius:5px;
   border: none;
   background-color: #454444;
-  transition: all 0.5s linear;
+  transition: var(--transition-effect);
   font-weight: 700;
   color: var(--para-txt-color);
   text-align: left;
@@ -476,13 +475,13 @@ input:active{
 
 select{
   height: 3rem;
-  min-width: calc(50% - 1.35rem);
+  min-width: calc(50% - 0.5rem);
   border-radius:5px;
   border: none;
   background-color: #454444;
   font-weight: 700;
   color: var(--para-txt-color);
-  transition: all 0.5s linear;
+  transition: var(--transition-effect);
 }
 
 select:focus{
@@ -494,7 +493,7 @@ select:focus{
   margin-left: 0.7rem;
 }
 #activity{
-  min-width: calc(100% - 2rem);
+  min-width:100%;
   padding: 1rem;
   margin-top: 0.7rem;
 }
@@ -507,42 +506,44 @@ select:focus{
 
 /* FAQ section */
 .FAQ{
-  margin: 5rem auto;
+  /* border: 3px solid white; */
+  margin-top: 3rem;
   width: 100%;
-  height: calc(100% - 50vh);
+  height:max-content;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
-.FAQ .FAQtitleBox{
-  position: relative;
+.FAQtitleBox{
   display: block;
+  min-height: min-content;
   font-size: var(--header-txt);
   color: var(--txt-color);
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 .FAQ-container{
-  position: relative;
-  display: block;
-
+  background-color: var(--input-bg);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content:center;
+  min-height:40vh;
+  /* border: 5px solid gray; */
+  padding: 2rem;
 }
 
-.FAQ-card{
-  display: block;
-
-}
 
 .FAQbar{
   display: block;
-  top: 100px;
   text-decoration: none;
   color: var(--para-txt-color);
   font-weight: 900;
   font-size:1.8rem;
   background-color: #454444;
   padding: 1rem;
-  transition: all 0.3s linear;
+  z-index: 10;
+  box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.2) inset, 0px -1px 0 rgba(0, 0, 0, 0.2) inset, 0px 1px 9px rgba(49, 47, 47, 0),0px 5px 9px rgb(4, 4, 4);
+  transition:var(--transition-effect);
 }
 .FAQ-card .FAQbar:hover{
   background-color: #45444491;
@@ -550,12 +551,16 @@ select:focus{
 .FAQ-answer{
   overflow: hidden;
   height: 0;
-  transition: height 0.3s linear,padding 0.2s ease;
+  transition: var(--transition-effect);
+}
+.FAQ-answer:target{
+  height:10rem;
 }
 .FAQ-answer>p{
   background: var(--input-bg);
   font-size: 1.5rem;
-  padding: 1.5rem;
+  padding: 1rem;
+  transition: var(--transition-effect);
 }
 .FAQ-answer>p::first-letter{
   font-size: 2rem;
@@ -563,16 +568,7 @@ select:focus{
   font-family: cursive;
   font-style: italic;
 }
-.FAQ-answer:target{
-  height: 50vh;
-  padding: 10rem;
-}
 
-
-
-/* text-decoration: none;
-  z-index: 10;
-  box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.2) inset, 0px -1px 0 rgba(0, 0, 0, 0.2) inset, 0px 1px 9px rgba(49, 47, 47, 0),0px 5px 9px rgb(4, 4, 4); */
 
 
 
@@ -585,11 +581,13 @@ select:focus{
 
 /* our team */
 .meetOurTeam{
+  /* border: 3px solid red; */
   padding-top: 2rem;
+  margin: 2rem;
 }
 .meetHeading {
-  margin: 6rem auto 1rem auto;
   text-align: center;
+  margin-bottom: 1rem;
 }
 .meetHeading h1{
   font-size: var(--header-txt);
@@ -611,8 +609,8 @@ select:focus{
 .CardContent{
   margin: 0 auto;
   position: relative;
-  max-width: 650px;
-  min-height: 500px;
+  max-width: 40.7rem;
+  min-height: 31.2rem;
   border-radius: 10px;
 }
 .teamTextBox{
@@ -689,9 +687,10 @@ select:focus{
 /* Footer */
 
 .footerContainer{
+  /* border: 2px solid green; */
   padding: 2.5rem;
   text-transform: capitalize;
-  margin: 5rem auto;
+  margin-bottom: 3rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -735,10 +734,13 @@ select:focus{
   flex-flow: column nowrap;
   align-items: end;
 }
+.ourServices ul{
+  position: relative;
+  left: -20px;
+}
 .horiLine{
   height: 0.1rem;
   width: 100%;
-  margin: 2rem auto;
   background-color: var(--input-bg);
 }
 
@@ -798,14 +800,28 @@ select:focus{
   .ourServices{
     align-items: start;
   }
+  .meetOurTeam{
+    /* border: 3px solid red; */
+    padding-top: 2rem;
+    margin: 0;
+  }
+  
   .teamCardsContainer{
-    padding: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
-    gap: 2rem;
+    /* padding: 1rem; */
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 3rem;
   }
   .CardContent{
-    width: 455px;
-    height: 300px;
+    width: 42rem;
+    height: 28rem;
+  }
+  .CardContent > img{
+    object-fit: cover;
+    object-position:top;
+  }
+  .ourServices ul{
+    position: relative;
+    left:0px;
   }
   
 }
@@ -846,12 +862,23 @@ select:focus{
     justify-content: center;
   }
   .teamCardsContainer{
-    padding: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* padding: 3rem; */
+    gap: 3rem;
   }
   .CardContent{
-    width: 400px;
-    height: 300px;
+    width: 350px;
+  }
+  .trainnerImage{
+    width: 100%;
+    height: 100%;
+    justify-self: stretch;
+  }
+  .CardContent{
+    margin: 0 auto;
+    position: relative;
+    max-width: 15rem;
+    min-height: 10rem;
+    border-radius: 10px;
   }
 }
