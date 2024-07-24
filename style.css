@@ -1,17 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.cdnfonts.com/css/miama");
 
-/* font-family: "Inter Tight", sans-serif; */
-/* font-family: 'Miama', sans-serif; */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 html {
-  background-color: rgb(0, 0, 0);
-  font-size: clamp(0.7rem, 1.5vw, 1rem);
+  font-size: clamp(0.5rem, 1.5vw, 1rem);
 }
 :root {
   --btn-color: rgb(230, 83, 60);
@@ -35,7 +31,7 @@ html {
   transition: var(--transition-effect);
 }
 
-.btn:hover{
+.btn:hover {
   background: rgb(102, 36, 26);
   transform: scale(1.1);
 }
@@ -279,7 +275,7 @@ span {
   background-color: transparent;
   border: 0.2rem solid var(--input-bg);
   margin-left: 1rem;
-  transition:var(--transition-effect);
+  transition: var(--transition-effect);
 }
 .transButton:hover {
   background-color: #1f1e1e;
@@ -354,34 +350,32 @@ span {
   max-height: 450px;
   min-width: 300px;
   flex: 1 0 350px;
-
 }
-.runImage{
+.runImage {
   width: 100%;
   height: 100%;
   border-radius: 2rem;
 }
-.runImage >img{
+.runImage > img {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
-  object-fit:cover;
-  object-position:center;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* BMI Chart */
-.BMIheading{
+.BMIheading {
   text-align: center;
   margin: 5rem 0 2rem;
 }
-.BMIheading>h1{
+.BMIheading > h1 {
   font-size: var(--header-txt);
   color: var(--txt-color);
-  font-weight:700;
-
+  font-weight: 700;
 }
-.BMI{
-  margin:0;
+.BMI {
+  margin: 0;
   /* border: 2px solid steelblue; */
   background: var(--input-bg);
   display: flex;
@@ -391,42 +385,39 @@ span {
 }
 
 /* BMIchart */
-.BMIchart{
+.BMIchart {
   /* border: 2px dashed orange; */
   padding: 2rem;
   flex: 1 0 auto;
 }
-.BMIchart h1{
+.BMIchart h1 {
   margin: 2rem auto;
-  color:var(--txt-color)
+  color: var(--txt-color);
 }
-.tableChart{
+.tableChart {
   width: 400px;
-
 }
 
-th{
+th {
   margin: 0;
   padding: 1rem;
   text-align: left;
   color: var(--txt-color);
-  border:0.1px solid rgba(255, 255, 255, 0.1); 
-
+  border: 0.1px solid rgba(255, 255, 255, 0.1);
 }
-td{
+td {
   text-align: left;
-  padding: 1rem; 
-  border:0.1px solid rgba(255, 255, 255, 0.1); 
+  padding: 1rem;
+  border: 0.1px solid rgba(255, 255, 255, 0.1);
 }
 
-table{
+table {
   border: 0.1px solid rgba(255, 255, 255, 0.1);
   border-collapse: collapse;
 }
 
-
 /* Calculator */
-.BMIcalculate{
+.BMIcalculate {
   margin: auto;
   height: 100%;
   border: var(--input-bg);
@@ -434,28 +425,28 @@ table{
   /* align-self: flex-end; */
 }
 
-.inputContainer{
+.inputContainer {
   padding: 2rem;
   margin: auto;
   height: 100%;
 }
-.BMIcalculate h1{
+.BMIcalculate h1 {
   font-weight: 700;
   color: var(--txt-color);
   margin: 2rem auto;
 }
-.BMIcalculate p{
+.BMIcalculate p {
   font-weight: 400;
   color: var(--para-txt-color);
   margin-bottom: 2rem;
 }
-.bmi-txt{
+.bmi-txt {
 }
-input{
+input {
   height: 3rem;
   min-width: calc((100% - 1rem) / 2);
   padding: 1rem;
-  border-radius:5px;
+  border-radius: 5px;
   border: none;
   background-color: #454444;
   transition: var(--transition-effect);
@@ -464,26 +455,24 @@ input{
   text-align: left;
   margin-top: 0.7rem;
 }
-input:nth-child(2){
+input:nth-child(2) {
   margin-left: 0.7rem;
 }
 
-
-input:focus{
+input:focus {
   outline: none;
-  color:var(--para-txt-color);
+  color: var(--para-txt-color);
   background: #9c9a9a;
 }
-input:active{
+input:active {
   outline: none;
   color: inherit;
 }
 
-
-select{
+select {
   height: 3rem;
   min-width: calc(50% - 0.5rem);
-  border-radius:5px;
+  border-radius: 5px;
   border: none;
   background-color: #454444;
   font-weight: 700;
@@ -491,37 +480,35 @@ select{
   transition: var(--transition-effect);
 }
 
-select:focus{
+select:focus {
   outline: none;
-  color:var(--para-txt-color);
+  color: var(--para-txt-color);
   background: #9c9a9a;
 }
-#gender{
+#gender {
   margin-left: 0.7rem;
 }
-#activity{
-  min-width:100%;
+#activity {
+  min-width: 100%;
   padding: 1rem;
   margin-top: 0.7rem;
 }
 
-.BMIbtn{
+.BMIbtn {
   margin-top: 1rem;
 }
 
-
-
 /* FAQ section */
-.FAQ{
+.FAQ {
   /* border: 3px solid white; */
   margin-top: 3rem;
   width: 100%;
-  height:max-content;
+  height: max-content;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
-.FAQtitleBox{
+.FAQtitleBox {
   display: block;
   min-height: min-content;
   font-size: var(--header-txt);
@@ -529,65 +516,64 @@ select:focus{
   text-align: center;
   margin: 2rem;
 }
-.FAQ-container{
+.FAQ-container {
   background-color: var(--input-bg);
   display: flex;
   flex-flow: column nowrap;
-  justify-content:center;
-  min-height:40vh;
+  justify-content: center;
+  min-height: 40vh;
   /* border: 5px solid gray; */
   padding: 2rem;
 }
 
-
-.FAQbar{
-  display: block;
+.FAQbar {
+  display: flex;
+  justify-content: space-between;
   text-decoration: none;
   color: var(--para-txt-color);
-  font-weight: 900;
-  font-size:1.8rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
   background-color: #454444;
   padding: 1rem;
-  z-index: 10;
-  box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.2) inset, 0px -1px 0 rgba(0, 0, 0, 0.2) inset, 0px 1px 9px rgba(49, 47, 47, 0),0px 5px 9px rgb(4, 4, 4);
-  transition:var(--transition-effect);
+  box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.2) inset,
+    0px -1px 0 rgba(0, 0, 0, 0.2) inset, 0px 1px 9px rgba(49, 47, 47, 0),
+    0px 5px 9px rgb(4, 4, 4);
+  transition: var(--transition-effect);
 }
-.FAQ-card .FAQbar:hover{
+.FAQbar > .fa-dumbbell {
+  transition: var(--transition-effect);
+}
+.FAQbar .fa-dumbbell:hover {
+  color: rgba(233, 141, 61, 0.739);
+  transform: rotate(-45deg) scale(1.2);
+}
+.FAQbar:hover {
   background-color: #45444491;
 }
-.FAQ-answer{
+.FAQ-answer {
   overflow: hidden;
   height: 0;
   transition: var(--transition-effect);
 }
-.FAQ-answer:target{
-  height:10rem;
+.FAQ-answer:target {
+  height: 10rem;
 }
-.FAQ-answer>p{
+.FAQ-answer > p {
   background: var(--input-bg);
   font-size: 1.5rem;
   padding: 1rem;
   transition: var(--transition-effect);
 }
-.FAQ-answer>p::first-letter{
+.FAQ-answer > p::first-letter {
   font-size: 2rem;
   color: red;
   font-family: cursive;
   font-style: italic;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* our team */
-.meetOurTeam{
+.meetOurTeam {
   /* border: 3px solid red; */
   padding-top: 2rem;
   margin: 2rem;
@@ -596,44 +582,43 @@ select:focus{
   text-align: center;
   margin-bottom: 1rem;
 }
-.meetHeading h1{
+.meetHeading h1 {
   font-size: var(--header-txt);
   color: var(--txt-color);
   /* margin: 2rem auto; */
 }
 
-.teamCardsContainer{
+.teamCardsContainer {
   width: 100%;
   background: var(--input-bg);
   padding: 3rem;
   border-radius: 1rem;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
 }
 
-
-.CardContent{
+.CardContent {
   margin: 0 auto;
   position: relative;
   max-width: 40.7rem;
   min-height: 31.2rem;
   border-radius: 10px;
 }
-.teamTextBox{
+.teamTextBox {
   position: absolute;
   color: var(--para-txt-color);
   top: 85%;
   left: 10%;
 }
-.teamTextBox h4{
-  --team-heading:1.5rem;
+.teamTextBox h4 {
+  --team-heading: 1.5rem;
   font-size: var(--para-heading-size);
   font-weight: 700;
   font-size: var(--team-heading);
   color: var(--txt-color);
 }
-.trainnerImage{
+.trainnerImage {
   position: relative;
   border-radius: 40px;
   height: 100%;
@@ -641,7 +626,7 @@ select:focus{
   border-radius: 10px;
 }
 
-.trainnerImage> img{
+.trainnerImage > img {
   border-radius: 10px;
   height: 100%;
   width: 100%;
@@ -649,10 +634,14 @@ select:focus{
   object-position: top;
 }
 
-.trainnerImage::after{
+.trainnerImage::after {
   content: "";
   position: absolute;
-  background: linear-gradient(to top right, rgba(3, 3, 3, 0.835), rgba(59, 55, 55, 0));
+  background: linear-gradient(
+    to top right,
+    rgba(3, 3, 3, 0.835),
+    rgba(59, 55, 55, 0)
+  );
   mix-blend-mode: multiply;
   height: 100%;
   width: 100%;
@@ -660,40 +649,12 @@ select:focus{
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius:0.82rem;
+  border-radius: 0.82rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Footer */
 
-.footerContainer{
+.footerContainer {
   /* border: 2px solid green; */
   padding: 2.5rem;
   text-transform: capitalize;
@@ -703,70 +664,76 @@ select:focus{
   justify-content: space-between;
   align-items: center;
 }
-.footerContainer h1{
+.footerContainer h1 {
   color: var(--txt-color);
   margin: 2rem 0;
 }
 
-
-.footerContainer ul li{
+.footerContainer ul li {
   margin: 1rem 0;
   list-style: none;
   text-transform: capitalize;
-
-
 }
-.footerContainer ul li>a{
+.footerContainer ul li > a {
   text-decoration: none;
   color: var(--para-txt-color);
 }
-.footerContainer ul li>a:visited{
+.footerContainer ul li > a:visited {
   text-decoration: none;
 }
 
-.logoAndDes{
+.logoAndDes {
   flex: 2 0 400px;
 }
-.getStarted{
+.getStarted {
   flex: 1 0 200px;
   text-align: left;
   display: flex;
   flex-flow: column nowrap;
   align-items: end;
 }
-.ourServices{
+.ourServices {
   flex: 1 0 200px;
   text-align: left;
   display: flex;
   flex-flow: column nowrap;
   align-items: end;
 }
-.ourServices ul{
+.ourServices ul {
   position: relative;
   left: -20px;
 }
-.horiLine{
+.horiLine {
   height: 0.1rem;
   width: 100%;
   background-color: var(--input-bg);
 }
 
-.copy{
-  text-align: center; 
-  color: var(--txt-color); 
+.copy {
+  text-align: center;
+  color: var(--txt-color);
   padding: 2rem;
 }
 
-.trainingText{
+.trainingText {
   font-weight: 700;
   margin-bottom: 2rem;
 }
-.trainingText h1{
+.trainingText h1 {
   font-size: var(--header-txt);
   color: var(--txt-color);
   margin: 1rem 0;
 }
 
+.footer__Logo {
+  color: var(--btn-color);
+  font-family: inherit;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-style: italic;
+  margin: 1rem auto;
+}
 
 /* Media Queries */
 @media screen and (max-width: 576px) {
@@ -787,54 +754,50 @@ select:focus{
     right: 15%;
     top: 25%;
   }
-  .runBtn{
+  .runBtn {
     width: 100%;
   }
   .runContent {
     flex: 1 0 300px;
   }
-  .inputContainer{
+  .inputContainer {
     padding: 2rem;
     margin: auto;
     height: 100%;
   }
-  .teamCards{
-    grid-template-columns: repeat(1,1fr);
+  .teamCards {
+    grid-template-columns: repeat(1, 1fr);
   }
-  .getStarted{
+  .getStarted {
     align-items: start;
   }
-  .ourServices{
+  .ourServices {
     align-items: start;
   }
-  .meetOurTeam{
+  .meetOurTeam {
     /* border: 3px solid red; */
     padding-top: 2rem;
     margin: 0;
   }
-  
-  .teamCardsContainer{
+
+  .teamCardsContainer {
     /* padding: 1rem; */
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
   }
-  .CardContent{
+  .CardContent {
     width: 42rem;
     height: 28rem;
   }
-  .CardContent > img{
+  .CardContent > img {
     object-fit: cover;
-    object-position:top;
+    object-position: top;
   }
-  .ourServices ul{
+  .ourServices ul {
     position: relative;
-    left:0px;
+    left: 0px;
   }
-  
 }
-
-
-
 
 @media screen and (min-width: 577px) and (max-width: 993px) {
   .logo {
@@ -868,20 +831,20 @@ select:focus{
     flex: 1 0 250px;
     justify-content: center;
   }
-  .teamCardsContainer{
+  .teamCardsContainer {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     /* padding: 3rem; */
     gap: 3rem;
   }
-  .CardContent{
+  .CardContent {
     width: 350px;
   }
-  .trainnerImage{
+  .trainnerImage {
     width: 100%;
     height: 100%;
     justify-self: stretch;
   }
-  .CardContent{
+  .CardContent {
     margin: 0 auto;
     position: relative;
     max-width: 15rem;
