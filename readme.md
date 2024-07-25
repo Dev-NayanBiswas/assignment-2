@@ -1,7 +1,7 @@
 ## Assignment-2
 **short-overview**
 _Here is a short description of my website.
-I styled my elements based on few custom variable and css usual properties,
+I styled my elements based on a few custom variables and CSS usual properties,
 like..._
 
 
@@ -9,16 +9,16 @@ like..._
 
 - Linear-gradient, 
 - rgba, rgb colors, 
-- Transition for a smooth effects on hover, 
+- Transition for a smooth effect on hover, 
 - CSS Animation,
 - flex and grid. 
-- In mobile view menu bar is accessible as drop down bar but not functional,
-- On **training and exercises** part I applied pseudo elements and mix-blend-mode with a slider effect on hover,
+- In the mobile view menu bar is accessible as a drop-down bar but not functional,
+- On **training and exercises** part I applied pseudo-elements and mix-blend-mode with a slider effect on hover,
 - Finally it's responsive on both large mobile(425px) and tablet(992px) devices as well
 
 ---
 ## for Bonus
-I added **FAQ section**, its dumbbells are hover animated and question bars has box-shadows to get an embedded look,
+I added **FAQ section**, its dumbbells are hover animated and the question bars have box shadows to get an embedded look,
 
 ---
-[Live-Link here]{https://dev-nayanbiswas.github.io/assignment-2/}
+[Live-Link here](https://dev-nayanbiswas.github.io/assignment-2/)
