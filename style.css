@@ -366,6 +366,16 @@ span {
 }
 
 /* BMI Chart */
+.BMI {
+  /* border: 2px solid steelblue; */
+  padding: 2rem;
+  margin: 0;
+  background: var(--input-bg);
+  display: flex;
+  min-height: 30vh;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
 .BMIheading {
   text-align: center;
   margin: 5rem 0 2rem;
@@ -375,28 +385,18 @@ span {
   color: var(--txt-color);
   font-weight: 700;
 }
-.BMI {
-  margin: 0;
-  /* border: 2px solid steelblue; */
-  background: var(--input-bg);
-  display: flex;
-  min-height: 30vh;
-  justify-content: space-between;
-  flex-flow: row wrap;
-}
 
 /* BMIchart */
 .BMIchart {
   /* border: 2px dashed orange; */
-  padding: 2rem;
-  flex: 1 0 auto;
+  flex: 1 0 calc(100% / 2);
 }
 .BMIchart h1 {
   margin: 2rem auto;
   color: var(--txt-color);
 }
 .tableChart {
-  width: 400px;
+  min-width: 300px;
 }
 
 th {
@@ -420,14 +420,14 @@ table {
 /* Calculator */
 .BMIcalculate {
   margin: auto;
+  width: 100%;
   height: 100%;
   border: var(--input-bg);
-  flex: 1 0 auto;
-  /* align-self: flex-end; */
+  flex: 1 0 calc(100% / 2);
 }
 
 .inputContainer {
-  padding: 2rem;
+  /* border: 2px solid red; */
   margin: auto;
   height: 100%;
 }
@@ -491,7 +491,6 @@ select:focus {
 }
 #activity {
   min-width: 100%;
-  padding: 1rem;
   margin-top: 0.7rem;
 }
 
@@ -631,6 +630,7 @@ select:focus {
   border-radius: 10px;
   height: 100%;
   width: 100%;
+  /* min-width: 480px; */
   object-fit: cover;
   object-position: top;
 }
@@ -735,9 +735,12 @@ select:focus {
   font-style: italic;
   margin: 1rem auto;
 }
+.logoAndDes >p{
+  font-size: 0.9rem;
+}
 
 /* Media Queries */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 425px) {
   .logo {
     flex: 0 0 150px;
   }
@@ -761,11 +764,53 @@ select:focus {
   .runContent {
     flex: 1 0 300px;
   }
+
+  /* input.... */
   .inputContainer {
-    padding: 2rem;
-    margin: auto;
-    height: 100%;
+    margin: 0;
+      padding: 0;
+      height: 100%;
+      /* width:21.8rem; */
   }
+  .height-weight{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+  }
+  .age-gender{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  input {
+    height: 3rem;
+    margin:0;
+  }
+  input:nth-child(2) {
+    margin-left: 0;
+  }
+  select {
+    height: 3rem;
+    /* min-width: 100%; */
+    border-radius: 5px;
+    border: none;
+    background-color: #454444;
+    font-weight: 700;
+    color: var(--para-txt-color);
+    transition: var(--transition-effect);
+  }
+  #gender {
+    margin-left: 0;
+  }
+  #activity {
+    margin-top: 0.7rem;
+  }
+
+
+
+
+  /* inputs ends */
   .teamCards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -794,13 +839,14 @@ select:focus {
     object-fit: cover;
     object-position: top;
   }
+
   .ourServices ul {
     position: relative;
     left: 0px;
   }
 }
 
-@media screen and (min-width: 577px) and (max-width: 993px) {
+@media screen and (min-width: 426px) and (max-width: 993px) {
   .logo {
     flex: 0 0 200px;
   }
@@ -851,5 +897,20 @@ select:focus {
     max-width: 15rem;
     min-height: 10rem;
     border-radius: 10px;
+  }
+  .BMI{
+    gap: 2rem;
+  }
+  .BMIchart {
+    flex: 1 0 calc(100% / 2);
+  }
+  .BMIcalculate {
+    width: 100%;
+    border: var(--input-bg);
+    flex: 1 0 calc(100% / 2);
+  }
+
+  .logoAndDes>p{
+    font-size: 0.6rem;
   }
 }
