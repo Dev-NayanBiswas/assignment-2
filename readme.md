@@ -21,4 +21,4 @@ like..._
 I added **FAQ section**, its dumbbells are hover animated and question bars has box-shadows to get an embedded look,
 
 ---
-[Live-Link here]{}
+[Live-Link here]{https://dev-nayanbiswas.github.io/assignment-2/}
