@@ -348,9 +348,9 @@ span {
 
 .runImageContainer {
   /* border: 2px solid red; */
-  max-height: 450px;
-  min-width: 300px;
-  flex: 1 0 350px;
+  max-height: 25rem;
+  min-width: 20rem;
+  flex: 1 0 20rem;
 }
 .runImage {
   width: 100%;
@@ -498,6 +498,91 @@ select:focus {
   margin-top: 1rem;
 }
 
+/* Training and Exercises */
+.trainnerImage {
+  position: relative;
+  border-radius: 40px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.trainnerImage > img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  /* min-width: 480px; */
+  object-fit: cover;
+  object-position: top;
+}
+
+.trainnerImage::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    to top right,
+    rgba(3, 3, 3, 0.835),
+    rgba(59, 55, 55, 0)
+  );
+  mix-blend-mode: multiply;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.82rem;
+}
+/* exercise ends */
+
+
+
+/* our team */
+.meetOurTeam {
+  /* border: 3px solid red; */
+  padding-top: 2rem;
+}
+.meetHeading {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.meetHeading h1 {
+  font-size: var(--header-txt);
+  color: var(--txt-color);
+}
+
+.teamCardsContainer {
+  width: 100%;
+  background: var(--input-bg);
+  padding: 3rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.CardContent {
+  margin: 0 auto;
+  position: relative;
+  max-width: 40.7rem;
+  min-height: 31.2rem;
+  border-radius: 10px;
+}
+.teamTextBox {
+  position: absolute;
+  color: var(--para-txt-color);
+  top: 85%;
+  left: 10%;
+}
+.teamTextBox h4 {
+  font-size: var(--para-heading-size);
+  font-weight: 700;
+  font-size: var(--team-heading);
+  color: var(--txt-color);
+}
+
+
+
 /* FAQ section */
 .FAQ {
   /* border: 3px solid white; */
@@ -572,86 +657,7 @@ select:focus {
   font-style: italic;
 }
 
-/* our team */
-.meetOurTeam {
-  /* border: 3px solid red; */
-  padding-top: 2rem;
-  margin: 2rem;
-}
-.meetHeading {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.meetHeading h1 {
-  font-size: var(--header-txt);
-  color: var(--txt-color);
-  /* margin: 2rem auto; */
-}
 
-.teamCardsContainer {
-  width: 100%;
-  background: var(--input-bg);
-  padding: 3rem;
-  border-radius: 1rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-}
-
-.CardContent {
-  margin: 0 auto;
-  position: relative;
-  max-width: 40.7rem;
-  min-height: 31.2rem;
-  border-radius: 10px;
-}
-.teamTextBox {
-  position: absolute;
-  color: var(--para-txt-color);
-  top: 85%;
-  left: 10%;
-}
-.teamTextBox h4 {
-  --team-heading: 1.5rem;
-  font-size: var(--para-heading-size);
-  font-weight: 700;
-  font-size: var(--team-heading);
-  color: var(--txt-color);
-}
-.trainnerImage {
-  position: relative;
-  border-radius: 40px;
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
-}
-
-.trainnerImage > img {
-  border-radius: 10px;
-  height: 100%;
-  width: 100%;
-  /* min-width: 480px; */
-  object-fit: cover;
-  object-position: top;
-}
-
-.trainnerImage::after {
-  content: "";
-  position: absolute;
-  background: linear-gradient(
-    to top right,
-    rgba(3, 3, 3, 0.835),
-    rgba(59, 55, 55, 0)
-  );
-  mix-blend-mode: multiply;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 0.82rem;
-}
 
 /* Footer */
 
@@ -880,8 +886,8 @@ select:focus {
   }
   .teamCardsContainer {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* padding: 3rem; */
-    gap: 3rem;
+    padding: 2rem;
+    gap: 2rem;
   }
   .CardContent {
     width: 350px;
@@ -894,8 +900,8 @@ select:focus {
   .CardContent {
     margin: 0 auto;
     position: relative;
-    max-width: 15rem;
-    min-height: 10rem;
+    max-width: 17rem;
+    min-height: 12rem;
     border-radius: 10px;
   }
   .BMI{
