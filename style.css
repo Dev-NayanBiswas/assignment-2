@@ -284,7 +284,6 @@ span {
 
 /* Change Habits  */
 .habit {
-  /* margin-top: 2rem; */
   min-height: 20vh;
 }
 .habitTxt {
@@ -498,42 +497,7 @@ select:focus {
   margin-top: 1rem;
 }
 
-/* Training and Exercises */
-.trainnerImage {
-  position: relative;
-  border-radius: 40px;
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
-}
 
-.trainnerImage > img {
-  border-radius: 10px;
-  height: 100%;
-  width: 100%;
-  /* min-width: 480px; */
-  object-fit: cover;
-  object-position: top;
-}
-
-.trainnerImage::after {
-  content: "";
-  position: absolute;
-  background: linear-gradient(
-    to top right,
-    rgba(3, 3, 3, 0.835),
-    rgba(59, 55, 55, 0)
-  );
-  mix-blend-mode: multiply;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 0.82rem;
-}
-/* exercise ends */
 
 
 
@@ -554,18 +518,20 @@ select:focus {
 .teamCardsContainer {
   width: 100%;
   background: var(--input-bg);
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .CardContent {
   margin: 0 auto;
   position: relative;
-  max-width: 40.7rem;
-  min-height: 31.2rem;
+  /*  */
+  min-width: calc((100% - 64px) / 3);
+  width: 100%;
+  height: 100%; 
   border-radius: 10px;
 }
 .teamTextBox {
@@ -581,6 +547,38 @@ select:focus {
   color: var(--txt-color);
 }
 
+.trainnerImage {
+  position: relative;
+  border-radius: 40px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.trainnerImage > img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.trainnerImage::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    to top right,
+    rgba(3, 3, 3, 0.835),
+    rgba(59, 55, 55, 0)
+  );
+  mix-blend-mode: multiply;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.82rem;
+}
 
 
 /* FAQ section */
@@ -776,7 +774,6 @@ select:focus {
     margin: 0;
       padding: 0;
       height: 100%;
-      /* width:21.8rem; */
   }
   .height-weight{
     display: flex;
@@ -798,7 +795,6 @@ select:focus {
   }
   select {
     height: 3rem;
-    /* min-width: 100%; */
     border-radius: 5px;
     border: none;
     background-color: #454444;
@@ -812,6 +808,17 @@ select:focus {
   #activity {
     margin-top: 0.7rem;
   }
+  .teamCardsContainer {
+    padding: 2rem;
+}
+  .CardContent {
+    min-width:calc(100%);
+    height: 35rem;
+}
+.trainnerImage img{
+  object-fit: cover;
+  object-position: top;
+}
 
 
 
@@ -838,9 +845,10 @@ select:focus {
     gap: 3rem;
   }
   .CardContent {
-    width: 42rem;
-    height: 28rem;
+    width: calc((100% - 48px) / 3);
+    height: 32rem;
   }
+  
   .CardContent > img {
     object-fit: cover;
     object-position: top;
@@ -889,18 +897,15 @@ select:focus {
     padding: 2rem;
     gap: 2rem;
   }
-  .CardContent {
-    width: 350px;
-  }
   .trainnerImage {
-    width: 100%;
+    width: 17.4rem;
     height: 100%;
     justify-self: stretch;
   }
   .CardContent {
     margin: 0 auto;
     position: relative;
-    max-width: 17rem;
+    min-width: 17rem;
     min-height: 12rem;
     border-radius: 10px;
   }
